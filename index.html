@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youssef Abdelatif - Portfolio Presentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .slide {
+            width: 1280px;
+            height: 720px;
+            page-break-after: always;
+            position: relative;
+            overflow: hidden;
+        }
+        @media print {
+            .slide { page-break-after: always; }
+            .no-print { display: none; }
+        }
+        @media screen {
+            body { background: #1e293b; padding: 20px; }
+            .slide-container { 
+                display: flex; 
+                flex-direction: column; 
+                gap: 40px; 
+                align-items: center;
+            }
+            .slide { 
+                box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+                border-radius: 8px;
+            }
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .slide-1 { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
+        .slide-2 { background: #0f172a; }
+        .slide-3 { background: #0f172a; }
+        .slide-4 { background: #0f172a; }
+        .slide-5 { background: #0f172a; }
+        .slide-6 { background: #0f172a; }
+    </style>
+</head>
+<body>
+    <div class="no-print fixed top-4 right-4 z-50 flex gap-2">
+        <button onclick="window.print()" class="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg font-semibold flex items-center gap-2 transition-colors">
+            <i data-lucide="printer"></i> Print / Save as PDF
+        </button>
+        <button onclick="toggleEditMode()" class="bg-slate-700 hover:bg-slate-600 text-white px-4 py-2 rounded-lg font-semibold flex items-center gap-2 transition-colors">
+            <i data-lucide="edit"></i> Edit Mode
+        </button>
+    </div>
+
+    <div class="slide-container">
+        <!-- Slide 1: Title Slide -->
+        <div class="slide slide-1 flex flex-col justify-center items-center text-center p-16 border-8 border-cyan-500/20" contenteditable="false">
+            <div class="mb-8">
+                <span class="mono text-cyan-400 text-xl tracking-widest uppercase border-2 border-cyan-500/30 rounded-full px-6 py-2 bg-cyan-500/5">
+                    Computer Engineering Student
+                </span>
+            </div>
+            <h1 class="text-7xl font-bold text-white mb-6 tracking-tight">
+                Youssef <span class="gradient-text">Abdelatif</span>
+            </h1>
+            <p class="text-2xl text-slate-400 mb-12 max-w-3xl">
+                AI Developer • Data Scientist • Cloud & Security Enthusiast
+            </p>
+            <div class="flex gap-8 text-slate-300">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="phone" class="w-5 h-5 text-cyan-400"></i>
+                    <span>+20 112 560 7937</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i data-lucide="mail" class="w-5 h-5 text-cyan-400"></i>
+                    <span>youssef.mohamed108@msa.edu.eg</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i data-lucide="linkedin" class="w-5 h-5 text-cyan-400"></i>
+                    <span>linkedin.com/in/youssefabdelatif</span>
+                </div>
+            </div>
+            <div class="absolute bottom-8 left-8 text-slate-600 text-sm">
+                MSA University | Class of 2027
+            </div>
+        </div>
+
+        <!-- Slide 2: About Me -->
+        <div class="slide slide-2 flex p-16" contenteditable="false">
+            <div class="w-1/2 pr-12 flex flex-col justify-center">
+                <h2 class="text-5xl font-bold text-white mb-8">
+                    About <span class="gradient-text">Me</span>
+                </h2>
+                <div class="space-y-6 text-slate-300 text-lg leading-relaxed">
+                    <p>
+                        Computer Engineering student with a strong foundation in <span class="text-cyan-400 font-semibold">Artificial Intelligence</span>, <span class="text-cyan-400 font-semibold">Data Science</span>, and software development.
+                    </p>
+                    <p>
+                        Passionate about building practical, problem-solving projects that combine analytical thinking with real-world applications. Experienced in developing intelligent systems and data-driven solutions.
+                    </p>
+                    <p>
+                        Continuously exploring new technologies in AI, machine learning, and cloud infrastructure to contribute to innovative engineering projects.
+                    </p>
+                </div>
+            </div>
+            <div class="w-1/2 flex items-center justify-center">
+                <div class="grid grid-cols-2 gap-6 w-full">
+                    <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700 text-center">
+                        <div class="text-4xl font-bold text-cyan-400 mb-2">4</div>
+                        <div class="text-slate-400">Professional Certifications</div>
+                    </div>
+                    <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700 text-center">
+                        <div class="text-4xl font-bold text-cyan-400 mb-2">2+</div>
+                        <div class="text-slate-400">Years Experience</div>
+                    </div>
+                    <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700 text-center">
+                        <div class="text-4xl font-bold text-cyan-400 mb-2">2</div>
+                        <div class="text-slate-400">Major Projects</div>
+                    </div>
+                    <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700 text-center">
+                        <div class="text-4xl font-bold text-cyan-400 mb-2">4</div>
+                        <div class="text-slate-400">Programming Languages</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Education & Certifications -->
+        <div class="slide slide-3 flex flex-col p-16" contenteditable="false">
+            <h2 class="text-5xl font-bold text-white mb-12">
+                Education & <span class="gradient-text">Certifications</span>
+            </h2>
+            
+            <div class="flex gap-12 h-full">
+                <!-- Education -->
+                <div class="w-1/3 bg-slate-800/30 rounded-2xl p-8 border border-slate-700">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i data-lucide="graduation-cap" class="w-8 h-8 text-cyan-400"></i>
+                        <h3 class="text-2xl font-bold text-white">Education</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="border-l-4 border-cyan-500 pl-4">
+                            <h4 class="text-xl font-bold text-white">B.Sc. Computer Engineering</h4>
+                            <p class="text-cyan-400 font-semibold">MSA University</p>
+                            <p class="text-slate-400 text-sm mt-1">2022 — 2027 (Expected)</p>
+                            <p class="text-slate-500 text-sm mt-2">Modern Sciences and Arts University</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div class="w-2/3 grid grid-cols-2 gap-6">
+                    <div class="bg-slate-800/30 rounded-2xl p-6 border border-slate-700 hover:border-cyan-500/50 transition-all">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-12 h-12 bg-red-500/10 rounded-lg flex items-center justify-center">
+                                <i data-lucide="brain" class="w-6 h-6 text-red-400"></i>
+                            </div>
+                            <span class="text-xs text-slate-500 bg-slate-900 px-2 py-1 rounded">Aug 2025</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-1">HCIA AI</h4>
+                        <p class="text-slate-400 text-sm">Huawei Certified - Artificial Intelligence</p>
+                    </div>
+
+                    <div class="bg-slate-800/30 rounded-2xl p-6 border border-slate-700 hover:border-cyan-500/50 transition-all">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
+                                <i data-lucide="cloud" class="w-6 h-6 text-blue-400"></i>
+                            </div>
+                            <span class="text-xs text-slate-500 bg-slate-900 px-2 py-1 rounded">Jan 2026</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-1">HCIA Cloud</h4>
+                        <p class="text-slate-400 text-sm">Huawei Certified - Cloud Computing</p>
+                    </div>
+
+                    <div class="bg-slate-800/30 rounded-2xl p-6 border border-slate-700 hover:border-cyan-500/50 transition-all">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center">
+                                <i data-lucide="shield" class="w-6 h-6 text-green-400"></i>
+                            </div>
+                            <span class="text-xs text-slate-500 bg-slate-900 px-2 py-1 rounded">Sep 2024</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-1">HCIA Security</h4>
+                        <p class="text-slate-400 text-sm">Huawei Certified - Network Security</p>
+                    </div>
+
+                    <div class="bg-slate-800/30 rounded-2xl p-6 border border-slate-700 hover:border-cyan-500/50 transition-all">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center">
+                                <i data-lucide="cpu" class="w-6 h-6 text-purple-400"></i>
+                            </div>
+                            <span class="text-xs text-slate-500 bg-slate-900 px-2 py-1 rounded">Aug 2024</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-1">ITI IoT</h4>
+                        <p class="text-slate-400 text-sm">Information Technology Institute</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Projects -->
+        <div class="slide slide-4 flex flex-col p-16" contenteditable="false">
+            <h2 class="text-5xl font-bold text-white mb-10">
+                Featured <span class="gradient-text">Projects</span>
+            </h2>
+            
+            <div class="grid grid-cols-2 gap-8 flex-1">
+                <!-- Project 1 -->
+                <div class="bg-slate-800/30 rounded-2xl p-8 border border-slate-700 flex flex-col">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center">
+                            <i data-lucide="graduation-cap" class="w-6 h-6 text-cyan-400"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">Grade Prediction System</h3>
+                            <span class="text-xs text-cyan-400 bg-cyan-500/10 px-2 py-1 rounded">Machine Learning</span>
+                        </div>
+                    </div>
+                    
+                    <p class="text-slate-400 mb-6 flex-1">
+                        ML-based system predicting student academic performance using historical data. Features data preprocessing, feature engineering, and interactive Streamlit interface.
+                    </p>
+                    
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center gap-2 text-slate-300 text-sm">
+                            <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400"></i>
+                            <span>Data preprocessing & feature engineering</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-slate-300 text-sm">
+                            <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400"></i>
+                            <span>Model comparison & evaluation metrics</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-slate-300 text-sm">
+                            <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400"></i>
+                            <span>Interactive web interface</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-700 rounded-full text-xs text-slate-300">Python</span>
+                        <span class="px-3 py-1 bg-slate-700 rounded-full text-xs text-slate-300">Pandas</span>
+                        <span class="px-3 py-1 bg-slate-700 rounded-full text-xs text-slate-300">Scikit-learn</span>
+                        <span class="px-3 py-1 bg-slate-700 rounded-full text-xs text-slate-300">Streamlit</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-slate-800/30 rounded-2xl p-8 border border-slate-700 flex flex-col">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center">
+                            <i data-lucide="library" class="w-6 h-6 text-purple-400"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">Library Management System</h3>
+                            <span class="text-xs text-purple-400 bg-purple-500/10 px-2 py-1 rounded">Desktop App</span>
+                        </div>
+                    </div>
+                    
+                    <p class="text-slate-400 mb-6 flex-1">
+                        Desktop application for managing library operations including user accounts, book loans, returns, and automated fine calculations with secure authentication.
+                    </p>
+                    
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center gap-2 text-slate-300 text-sm">
+                            <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400"></i>
+                            <span>Secure password hashing & authentication</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-slate-300 text-sm">
+                            <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400"></i>
+                            <span>Book loan tracking & fine automation</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-slate-300 text-sm">
+                            <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400"></i>
+                            <span>SQLite database integration</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-700 rounded-full text-xs text-slate-300">Python</span>
+                        <span class="px-3 py-1 bg-slate-700 rounded-full text-xs text-slate-300">SQLite</span>
+                        <span class="px-3 py-1 bg-slate-700 rounded-full text-xs text-slate-300">Hashing</span>
+                        <span class="px-3 py-1 bg-slate-700 rounded-full text-xs text-slate-300">UI Logic</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Skills -->
+        <div class="slide slide-5 flex flex-col p-16" contenteditable="false">
+            <h2 class="text-5xl font-bold text-white mb-12">
+                Technical <span class="gradient-text">Skills</span>
+            </h2>
+            
+            <div class="grid grid-cols-3 gap-8 flex-1">
+                <!-- Programming Languages -->
+                <div class="bg-slate-800/30 rounded-2xl p-8 border border-slate-700">
+                    <div class="flex items-center gap-3 mb-8">
+                        <i data-lucide="code-2" class="w-8 h-8 text-cyan-400"></i>
+                        <h3 class="text-2xl font-bold text-white">Languages</h3>
+                    </div>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-slate-300 font-medium">Python</span>
+                                <span class="text-cyan-400 text-sm">Advanced</span>
+                            </div>
+                            <div class="w-full bg-slate-700 rounded-full h-3">
+                                <div class="bg-gradient-to-r from-cyan-500 to-blue-500 h-3 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-slate-300 font-medium">C++</span>
+                                <span class="text-cyan-400 text-sm">Intermediate</span>
+                            </div>
+                            <div class="w-full bg-slate-700 rounded-full h-3">
+                                <div class="bg-gradient-to-r from-cyan-500 to-blue-500 h-3 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-slate-300 font-medium">C</span>
+                                <span class="text-cyan-400 text-sm">Intermediate</span>
+                            </div>
+                            <div class="w-full bg-slate-700 rounded-full h-3">
+                                <div class="bg-gradient-to-r from-cyan-500 to-blue-500 h-3 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-slate-300 font-medium">SQL</span>
+                                <span class="text-cyan-400 text-sm">Intermediate</span>
+                            </div>
+                            <div class="w-full bg-slate-700 rounded-full h-3">
+                                <div class="bg-gradient-to-r from-cyan-500 to-blue-500 h-3 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Core Competencies -->
+                <div class="bg-slate-800/30 rounded-2xl p-8 border border-slate-700">
+                    <div class="flex items-center gap-3 mb-8">
+                        <i data-lucide="cpu" class="w-8 h-8 text-purple-400"></i>
+                        <h3 class="text-2xl font-bold text-white">Core Skills</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3 p-3 bg-slate-900/50 rounded-lg border border-slate-700">
+                            <i data-lucide="git-branch" class="w-5 h-5 text-cyan-400"></i>
+                            <span class="text-slate-300">Data Structures & Algorithms</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-900/50 rounded-lg border border-slate-700">
+                            <i data-lucide="box" class="w-5 h-5 text-cyan-400"></i>
+                            <span class="text-slate-300">Object-Oriented Programming</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-900/50 rounded-lg border border-slate-700">
+                            <i data-lucide="brain" class="w-5 h-5 text-cyan-400"></i>
+                            <span class="text-slate-300">Machine Learning Fundamentals</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-900/50 rounded-lg border border-slate-700">
+                            <i data-lucide="bar-chart-2" class="w-5 h-5 text-cyan-400"></i>
+                            <span class="text-slate-300">Data Analysis & Preprocessing</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-slate-900/50 rounded-lg border border-slate-700">
+                            <i data-lucide="database" class="w-5 h-5 text-cyan-400"></i>
+                            <span class="text-slate-300">Database Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools -->
+                <div class="bg-slate-800/30 rounded-2xl p-8 border border-slate-700">
+                    <div class="flex items-center gap-3 mb-8">
+                        <i data-lucide="wrench" class="w-8 h-8 text-green-400"></i>
+                        <h3 class="text-2xl font-bold text-white">Tools</h3>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex flex-col items-center p-4 bg-slate-900/50 rounded-lg border border-slate-700">
+                            <i data-lucide="layout-dashboard" class="w-8 h-8 text-cyan-400 mb-2"></i>
+                            <span class="text-sm text-slate-300">Streamlit</span>
+                        </div>
+                        <div class="flex flex-col items-center p-4 bg-slate-900/50 rounded-lg border border-slate-700">
+                            <i data-lucide="circuit-board" class="w-8 h-8 text-cyan-400 mb-2"></i>
+                            <span class="text-sm text-slate-300">Proteus</span>
+                        </div>
+                        <div class="flex flex-col items-center p-4 bg-slate-900/50 rounded-lg border border-slate-700">
+                            <i data-lucide="git-commit" class="w-8 h-8 text-cyan-400 mb-2"></i>
+                            <span class="text-sm text-slate-300">Git & GitHub</span>
+                        </div>
+                        <div class="flex flex-col items-center p-4 bg-slate-900/50 rounded-lg border border-slate-700">
+                            <i data-lucide="table" class="w-8 h-8 text-cyan-400 mb-2"></i>
+                            <span class="text-sm text-slate-300">Pandas</span>
+                        </div>
+                        <div class="flex flex-col items-center p-4 bg-slate-900/50 rounded-lg border border-slate-700">
+                            <i data-lucide="robot" class="w-8 h-8 text-cyan-400 mb-2"></i>
+                            <span class="text-sm text-slate-300">Scikit-learn</span>
+                        </div>
+                        <div class="flex flex-col items-center p-4 bg-slate-900/50 rounded-lg border border-slate-700">
+                            <i data-lucide="terminal" class="w-8 h-8 text-cyan-400 mb-2"></i>
+                            <span class="text-sm text-slate-300">VS Code</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Contact -->
+        <div class="slide slide-6 flex flex-col justify-center items-center text-center p-16 bg-gradient-to-br from-slate-900 to-slate-800" contenteditable="false">
+            <h2 class="text-6xl font-bold text-white mb-6">
+                Let's <span class="gradient-text">Connect</span>
+            </h2>
+            <p class="text-xl text-slate-400 mb-12 max-w-2xl">
+                I'm currently looking for internship opportunities and collaborative projects in AI, software development, and cloud computing.
+            </p>
+            
+            <div class="grid grid-cols-3 gap-8 mb-12 w-full max-w-4xl">
+                <a href="tel:+201125607937" class="group bg-slate-800/50 p-8 rounded-2xl border border-slate-700 hover:border-cyan-500/50 transition-all">
+                    <div class="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-cyan-500/20 transition-colors">
+                        <i data-lucide="phone" class="w-8 h-8 text-cyan-400"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-1">Phone</h3>
+                    <p class="text-slate-400">+20 112 560 7937</p>
+                </a>
+                
+                <a href="mailto:youssef.mohamed108@msa.edu.eg" class="group bg-slate-800/50 p-8 rounded-2xl border border-slate-700 hover:border-cyan-500/50 transition-all">
+                    <div class="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-cyan-500/20 transition-colors">
+                        <i data-lucide="mail" class="w-8 h-8 text-cyan-400"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-1">Email</h3>
+                    <p class="text-slate-400 text-sm">youssef.mohamed108@msa.edu.eg</p>
+                </a>
+                
+                <a href="https://www.linkedin.com/in/youssefabdelatif" target="_blank" class="group bg-slate-800/50 p-8 rounded-2xl border border-slate-700 hover:border-cyan-500/50 transition-all">
+                    <div class="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-cyan-500/20 transition-colors">
+                        <i data-lucide="linkedin" class="w-8 h-8 text-cyan-400"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-1">LinkedIn</h3>
+                    <p class="text-slate-400 text-sm">linkedin.com/in/youssefabdelatif</p>
+                </a>
+            </div>
+            
+            <div class="text-slate-600 text-sm">
+                MSA University • Computer Engineering • Class of 2027
+            </div>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+        
+        function toggleEditMode() {
+            const slides = document.querySelectorAll('.slide');
+            const isEditable = slides[0].contentEditable === 'true';
+            
+            slides.forEach(slide => {
+                slide.contentEditable = !isEditable;
+                slide.style.outline = !isEditable ? '2px dashed cyan' : 'none';
+            });
+            
+            alert(isEditable ? 'Edit mode disabled. Content is now locked.' : 'Edit mode enabled! Click any text to edit. Use Print button to save as PDF.');
+        }
+        
+        // Add keyboard shortcut for edit mode (Ctrl/Cmd + E)
+        document.addEventListener('keydown', (e) => {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'e') {
+                e.preventDefault();
+                toggleEditMode();
+            }
+        });
+    </script>
+</body>
+</html>
